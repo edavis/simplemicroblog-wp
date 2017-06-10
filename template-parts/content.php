@@ -9,8 +9,8 @@
 
 ?>
 
-<?php if ( ! is_single() ): ?>
-	<time class="newday"><?php the_date() ?></time>
+<?php if ( ! is_single() && the_date( '', '', '', false ) ): ?>
+	<time class="newday" datetime="<?php echo get_the_date( 'Y-m-d' ) ?>"><?php echo get_the_date( get_option ( 'date_format' )) ?></time>
 <?php endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
