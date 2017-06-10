@@ -25,7 +25,6 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
-			<div id="header-avatar"><?php echo get_avatar( get_option( 'admin_email' ), 256 ); ?></div>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div><!-- .site-branding -->
 
