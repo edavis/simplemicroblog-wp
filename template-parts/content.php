@@ -9,6 +9,10 @@
 
 ?>
 
+<?php if ( ! is_single() ): ?>
+	<time class="newday"><?php the_date() ?></time>
+<?php endif; ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">

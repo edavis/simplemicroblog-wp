@@ -1003,3 +1003,8 @@ a.page-numbers:hover {
 	background: #eee;
 	border: 1px solid #ddd;
 }
+
+.newday {
+	font-size: 110%;
+	font-weight: bold;
+}
