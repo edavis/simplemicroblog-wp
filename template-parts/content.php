@@ -9,8 +9,13 @@
 
 ?>
 
-<?php if ( ! is_single() && the_date( '', '', '', false ) ): ?>
-	<time class="newday" datetime="<?php echo get_the_date( 'Y-m-d' ) ?>"><?php echo get_the_date( get_option ( 'date_format' )) ?></time>
+<?php if ( is_front_page() && the_date( '', '', '', false ) ): ?>
+	<?php
+	$datetime = get_the_date( 'Y-m-d' );
+	$link = get_the_date( '/Y/m/d/' );
+	$formatted = get_the_date( get_option( 'date_format' ));
+	?>
+	<time class="newday" datetime="<?php echo $datetime ?>"><a href="<?php echo $link ?>"><?php echo $formatted ?></a></time>
 <?php endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
